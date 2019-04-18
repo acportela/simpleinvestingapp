@@ -1,2 +1,1 @@
-# simpleinvestingapp
-Simple Investing App
+# Simple Investing App
