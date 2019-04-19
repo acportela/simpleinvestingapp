@@ -10,11 +10,13 @@
 		477C25E388C1C981BE939385 /* Pods_SimpleInvestingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 859DB96187514165E42ED45C /* Pods_SimpleInvestingTests.framework */; };
 		5E8BE9A503425BC15547ABA4 /* Pods_SimpleInvesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C7F31A8CB950C067A18F352 /* Pods_SimpleInvesting.framework */; };
 		D66490AB22693AB700B71E04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66490AA22693AB700B71E04 /* AppDelegate.swift */; };
-		D66490AD22693AB700B71E04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66490AC22693AB700B71E04 /* ViewController.swift */; };
-		D66490B022693AB700B71E04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D66490AE22693AB700B71E04 /* Main.storyboard */; };
 		D66490B222693AB900B71E04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D66490B122693AB900B71E04 /* Assets.xcassets */; };
 		D66490B522693AB900B71E04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D66490B322693AB900B71E04 /* LaunchScreen.storyboard */; };
 		D66490C322693AE600B71E04 /* SimpleInvestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66490C222693AE600B71E04 /* SimpleInvestingTests.swift */; };
+		D6A29EFA226949EC009780B1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A29EF9226949EC009780B1 /* AppCoordinator.swift */; };
+		D6A29EFC22694B48009780B1 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A29EFB22694B48009780B1 /* Resources.swift */; };
+		D6A29EFE226952EB009780B1 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A29EFD226952EB009780B1 /* UIColorExtension.swift */; };
+		D6A29F002269531E009780B1 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A29EFF2269531E009780B1 /* UIAlertControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,14 +37,16 @@
 		C39E90DFA38F43DC2F3CC07C /* Pods-SimpleInvestingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleInvestingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleInvestingTests/Pods-SimpleInvestingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D66490A722693AB700B71E04 /* SimpleInvesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleInvesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66490AA22693AB700B71E04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D66490AC22693AB700B71E04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D66490AF22693AB700B71E04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D66490B122693AB900B71E04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D66490B422693AB900B71E04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D66490B622693AB900B71E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D66490C022693AE500B71E04 /* SimpleInvestingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleInvestingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66490C222693AE600B71E04 /* SimpleInvestingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleInvestingTests.swift; sourceTree = "<group>"; };
 		D66490C422693AE600B71E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6A29EF9226949EC009780B1 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D6A29EFB22694B48009780B1 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		D6A29EFD226952EB009780B1 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		D6A29EFF2269531E009780B1 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		D7833FAB930A9CC5B267D4F5 /* Pods-SimpleInvesting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleInvesting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleInvesting/Pods-SimpleInvesting.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,12 +113,10 @@
 		D66490A922693AB700B71E04 /* SimpleInvesting */ = {
 			isa = PBXGroup;
 			children = (
-				D66490AA22693AB700B71E04 /* AppDelegate.swift */,
-				D66490AC22693AB700B71E04 /* ViewController.swift */,
-				D66490AE22693AB700B71E04 /* Main.storyboard */,
-				D66490B122693AB900B71E04 /* Assets.xcassets */,
-				D66490B322693AB900B71E04 /* LaunchScreen.storyboard */,
-				D66490B622693AB900B71E04 /* Info.plist */,
+				D6A29F0322695463009780B1 /* Styling */,
+				D6A29F012269539D009780B1 /* Supporting Files */,
+				D6A29F0222695449009780B1 /* App */,
+				D6A29EFF2269531E009780B1 /* UIAlertControllerExtension.swift */,
 			);
 			path = SimpleInvesting;
 			sourceTree = "<group>";
@@ -126,6 +128,34 @@
 				D66490C422693AE600B71E04 /* Info.plist */,
 			);
 			path = SimpleInvestingTests;
+			sourceTree = "<group>";
+		};
+		D6A29F012269539D009780B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D66490B122693AB900B71E04 /* Assets.xcassets */,
+				D66490B322693AB900B71E04 /* LaunchScreen.storyboard */,
+				D66490B622693AB900B71E04 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D6A29F0222695449009780B1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D66490AA22693AB700B71E04 /* AppDelegate.swift */,
+				D6A29EF9226949EC009780B1 /* AppCoordinator.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D6A29F0322695463009780B1 /* Styling */ = {
+			isa = PBXGroup;
+			children = (
+				D6A29EFB22694B48009780B1 /* Resources.swift */,
+				D6A29EFD226952EB009780B1 /* UIColorExtension.swift */,
+			);
+			path = Styling;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +170,7 @@
 				D66490A422693AB700B71E04 /* Frameworks */,
 				D66490A522693AB700B71E04 /* Resources */,
 				12AA4F25062DC8DD26CC1EA9 /* [CP] Embed Pods Frameworks */,
+				D6A29F042269553E009780B1 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -215,7 +246,6 @@
 			files = (
 				D66490B522693AB900B71E04 /* LaunchScreen.storyboard in Resources */,
 				D66490B222693AB900B71E04 /* Assets.xcassets in Resources */,
-				D66490B022693AB700B71E04 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +337,24 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleInvestingTests/Pods-SimpleInvestingTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D6A29F042269553E009780B1 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		FFF52FA1BA019422AE9F3AEA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -336,7 +384,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D66490AD22693AB700B71E04 /* ViewController.swift in Sources */,
+				D6A29EFA226949EC009780B1 /* AppCoordinator.swift in Sources */,
+				D6A29EFC22694B48009780B1 /* Resources.swift in Sources */,
+				D6A29F002269531E009780B1 /* UIAlertControllerExtension.swift in Sources */,
+				D6A29EFE226952EB009780B1 /* UIColorExtension.swift in Sources */,
 				D66490AB22693AB700B71E04 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,14 +411,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D66490AE22693AB700B71E04 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D66490AF22693AB700B71E04 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D66490B322693AB900B71E04 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -502,7 +545,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4KYD88NNTV;
-				INFOPLIST_FILE = SimpleInvesting/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SimpleInvesting/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -521,7 +564,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4KYD88NNTV;
-				INFOPLIST_FILE = SimpleInvesting/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SimpleInvesting/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
