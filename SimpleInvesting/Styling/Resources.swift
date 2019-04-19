@@ -10,6 +10,7 @@ import UIKit
 
 enum Resources {
     enum Colors {}
+    enum Fonts {}
 }
 
 extension Resources.Colors {
@@ -20,4 +21,30 @@ extension Resources.Colors {
     static let green =  UIColor(red: 0, green: 193, blue: 170)
     static let white =  UIColor(red: 255, green: 255, blue: 255)
 
+}
+
+extension Resources.Fonts {
+    
+    static func light(ofSize size: CGFloat) -> UIFont {
+        return font(named: "ProximaNova-Light", size: size)
+    }
+
+    static func regular(ofSize size: CGFloat) -> UIFont {
+        return font(named: "ProximaNova-Regular", size: size)
+    }
+
+    static func semibold(ofSize size: CGFloat) -> UIFont {
+        return font(named: "ProximaNova-Semibold", size: size)
+    }
+    
+    private static func font(named: String, size: CGFloat) -> UIFont {
+        
+        guard let font = UIFont(name: named, size: size) else {
+            fatalError("The font \(named) was not found")
+        }
+        
+        return font
+        
+    }
+    
 }
