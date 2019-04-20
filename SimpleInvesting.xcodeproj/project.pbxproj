@@ -17,7 +17,17 @@
 		D65823D8226AC7E500FB34A1 /* SnapshotUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65823D7226AC7E500FB34A1 /* SnapshotUtils.swift */; };
 		D65823DA226AC8FC00FB34A1 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65823D9226AC8FC00FB34A1 /* UIViewExtension.swift */; };
 		D65823DC226ACDB500FB34A1 /* NSMutableAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65823DB226ACDB400FB34A1 /* NSMutableAttributedStringExtension.swift */; };
-		D65823DE226ACE6F00FB34A1 /* SimpleItemResultViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65823DD226ACE6F00FB34A1 /* SimpleItemResultViewSpec.swift */; };
+		D65823DE226ACE6F00FB34A1 /* SingleItemResultViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65823DD226ACE6F00FB34A1 /* SingleItemResultViewSpec.swift */; };
+		D65823E2226B369D00FB34A1 /* MainButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65823E1226B369D00FB34A1 /* MainButtonView.swift */; };
+		D65823E4226B4D4800FB34A1 /* MainButtonViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65823E3226B4D4800FB34A1 /* MainButtonViewSpec.swift */; };
+		D65823E6226B595D00FB34A1 /* SimulationResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65823E5226B595D00FB34A1 /* SimulationResultView.swift */; };
+		D65823E8226B704000FB34A1 /* SimulationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65823E7226B704000FB34A1 /* SimulationResponse.swift */; };
+		D65823EA226B98AD00FB34A1 /* SimulationResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = D65823E9226B98AD00FB34A1 /* SimulationResponse.json */; };
+		D65823ED226B995C00FB34A1 /* MockHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65823EC226B995C00FB34A1 /* MockHelper.swift */; };
+		D65823EF226B99C000FB34A1 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65823EE226B99C000FB34A1 /* JsonHelper.swift */; };
+		D65823F2226B9B4900FB34A1 /* WindowTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65823F1226B9B4900FB34A1 /* WindowTestHelper.swift */; };
+		D65823F4226B9B8100FB34A1 /* SimulationResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65823F3226B9B8100FB34A1 /* SimulationResultViewController.swift */; };
+		D65823F7226BBAA500FB34A1 /* SimulationResultViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65823F6226BBAA500FB34A1 /* SimulationResultViewControllerSpec.swift */; };
 		D66490AB22693AB700B71E04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66490AA22693AB700B71E04 /* AppDelegate.swift */; };
 		D66490B222693AB900B71E04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D66490B122693AB900B71E04 /* Assets.xcassets */; };
 		D66490B522693AB900B71E04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D66490B322693AB900B71E04 /* LaunchScreen.storyboard */; };
@@ -55,7 +65,17 @@
 		D65823D7226AC7E500FB34A1 /* SnapshotUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotUtils.swift; sourceTree = "<group>"; };
 		D65823D9226AC8FC00FB34A1 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		D65823DB226ACDB400FB34A1 /* NSMutableAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedStringExtension.swift; sourceTree = "<group>"; };
-		D65823DD226ACE6F00FB34A1 /* SimpleItemResultViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleItemResultViewSpec.swift; sourceTree = "<group>"; };
+		D65823DD226ACE6F00FB34A1 /* SingleItemResultViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleItemResultViewSpec.swift; sourceTree = "<group>"; };
+		D65823E1226B369D00FB34A1 /* MainButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButtonView.swift; sourceTree = "<group>"; };
+		D65823E3226B4D4800FB34A1 /* MainButtonViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButtonViewSpec.swift; sourceTree = "<group>"; };
+		D65823E5226B595D00FB34A1 /* SimulationResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationResultView.swift; sourceTree = "<group>"; };
+		D65823E7226B704000FB34A1 /* SimulationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationResponse.swift; sourceTree = "<group>"; };
+		D65823E9226B98AD00FB34A1 /* SimulationResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SimulationResponse.json; sourceTree = "<group>"; };
+		D65823EC226B995C00FB34A1 /* MockHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHelper.swift; sourceTree = "<group>"; };
+		D65823EE226B99C000FB34A1 /* JsonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
+		D65823F1226B9B4900FB34A1 /* WindowTestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowTestHelper.swift; sourceTree = "<group>"; };
+		D65823F3226B9B8100FB34A1 /* SimulationResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationResultViewController.swift; sourceTree = "<group>"; };
+		D65823F6226BBAA500FB34A1 /* SimulationResultViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationResultViewControllerSpec.swift; sourceTree = "<group>"; };
 		D66490A722693AB700B71E04 /* SimpleInvesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleInvesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66490AA22693AB700B71E04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D66490B122693AB900B71E04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				D65823CE226AA0D500FB34A1 /* ValueKind.swift */,
+				D65823E7226B704000FB34A1 /* SimulationResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -137,7 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				D65823D5226AC6DA00FB34A1 /* SimulationResultHeaderViewSpec.swift */,
-				D65823DD226ACE6F00FB34A1 /* SimpleItemResultViewSpec.swift */,
+				D65823DD226ACE6F00FB34A1 /* SingleItemResultViewSpec.swift */,
+				D65823E3226B4D4800FB34A1 /* MainButtonViewSpec.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -149,6 +171,40 @@
 				D65823D9226AC8FC00FB34A1 /* UIViewExtension.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D65823EB226B98C100FB34A1 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D65823E9226B98AD00FB34A1 /* SimulationResponse.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D65823F0226B9A6A00FB34A1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D65823EC226B995C00FB34A1 /* MockHelper.swift */,
+				D65823EE226B99C000FB34A1 /* JsonHelper.swift */,
+				D65823F1226B9B4900FB34A1 /* WindowTestHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D65823F5226BBA8900FB34A1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D65823F3226B9B8100FB34A1 /* SimulationResultViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D65823F9226BBB3D00FB34A1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D65823F6226BBAA500FB34A1 /* SimulationResultViewControllerSpec.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		D664909E22693AB700B71E04 = {
@@ -174,6 +230,7 @@
 		D66490A922693AB700B71E04 /* SimpleInvesting */ = {
 			isa = PBXGroup;
 			children = (
+				D65823F5226BBA8900FB34A1 /* Controllers */,
 				D6A29F0222695449009780B1 /* App */,
 				D65823D2226AB73100FB34A1 /* Extensions */,
 				D65823CD226AA0C300FB34A1 /* Models */,
@@ -190,6 +247,9 @@
 				D66490C422693AE600B71E04 /* Info.plist */,
 				D65823E0226AD63C00FB34A1 /* Utils */,
 				D65823DF226AD63200FB34A1 /* Views */,
+				D65823EB226B98C100FB34A1 /* Mocks */,
+				D65823F0226B9A6A00FB34A1 /* Helpers */,
+				D65823F9226BBB3D00FB34A1 /* Controllers */,
 			);
 			path = SimpleInvestingTests;
 			sourceTree = "<group>";
@@ -238,6 +298,8 @@
 				D6A29F1322695BE9009780B1 /* ViewCodingProtocol.swift */,
 				D65121EA2269EA4800FC1C3F /* SingleItemResultView.swift */,
 				D65823D0226AA12200FB34A1 /* SimulationResultHeaderView.swift */,
+				D65823E1226B369D00FB34A1 /* MainButtonView.swift */,
+				D65823E5226B595D00FB34A1 /* SimulationResultView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -340,6 +402,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D65823EA226B98AD00FB34A1 /* SimulationResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,9 +536,13 @@
 			files = (
 				D65823D4226AB74500FB34A1 /* DoubleExtension.swift in Sources */,
 				D6A29F1422695BE9009780B1 /* ViewCodingProtocol.swift in Sources */,
+				D65823E6226B595D00FB34A1 /* SimulationResultView.swift in Sources */,
 				D6A29EFA226949EC009780B1 /* AppCoordinator.swift in Sources */,
+				D65823E2226B369D00FB34A1 /* MainButtonView.swift in Sources */,
 				D6A29EFC22694B48009780B1 /* Resources.swift in Sources */,
 				D6A29F002269531E009780B1 /* UIAlertControllerExtension.swift in Sources */,
+				D65823E8226B704000FB34A1 /* SimulationResponse.swift in Sources */,
+				D65823F4226B9B8100FB34A1 /* SimulationResultViewController.swift in Sources */,
 				D65823D1226AA12200FB34A1 /* SimulationResultHeaderView.swift in Sources */,
 				D6A29EFE226952EB009780B1 /* UIColorExtension.swift in Sources */,
 				D65823CF226AA0D500FB34A1 /* ValueKind.swift in Sources */,
@@ -492,7 +559,12 @@
 				D65823DA226AC8FC00FB34A1 /* UIViewExtension.swift in Sources */,
 				D65823D6226AC6DA00FB34A1 /* SimulationResultHeaderViewSpec.swift in Sources */,
 				D65823D8226AC7E500FB34A1 /* SnapshotUtils.swift in Sources */,
-				D65823DE226ACE6F00FB34A1 /* SimpleItemResultViewSpec.swift in Sources */,
+				D65823F7226BBAA500FB34A1 /* SimulationResultViewControllerSpec.swift in Sources */,
+				D65823EF226B99C000FB34A1 /* JsonHelper.swift in Sources */,
+				D65823ED226B995C00FB34A1 /* MockHelper.swift in Sources */,
+				D65823F2226B9B4900FB34A1 /* WindowTestHelper.swift in Sources */,
+				D65823E4226B4D4800FB34A1 /* MainButtonViewSpec.swift in Sources */,
+				D65823DE226ACE6F00FB34A1 /* SingleItemResultViewSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

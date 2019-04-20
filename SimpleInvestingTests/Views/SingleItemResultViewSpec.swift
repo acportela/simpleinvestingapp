@@ -1,5 +1,5 @@
 //
-//  SimpleItemResultViewSpec.swift
+//  SingleItemResultViewSpec.swift
 //  SimpleInvestingTests
 //
 //  Created by Antonio Rodrigues on 20/04/19.
@@ -12,7 +12,7 @@ import Nimble_Snapshots
 
 @testable import SimpleInvesting
 
-class SimpleItemResultViewSpec: QuickSpec {
+class SingleItemResultViewSpec: QuickSpec {
     
     override func spec() {
         

@@ -15,7 +15,7 @@ final class SimulationResultHeaderView: UIView {
         let name = UILabel()
         name.textAlignment = .center
         name.text = "Resultado da simulação"
-        name.font = Resources.Fonts.light(ofSize: 14)
+        name.font = Resources.Fonts.regular(ofSize: 14)
         name.textColor = Resources.Colors.grey
         return name
     }()
@@ -23,7 +23,7 @@ final class SimulationResultHeaderView: UIView {
     private let grossAmountValue: UILabel = {
         let name = UILabel()
         name.textAlignment = .center
-        name.font = Resources.Fonts.light(ofSize: 20)
+        name.font = Resources.Fonts.light(ofSize: 30)
         name.textColor = Resources.Colors.black
         return name
     }()
@@ -31,7 +31,7 @@ final class SimulationResultHeaderView: UIView {
     private let profitValue: UILabel = {
         let name = UILabel()
         name.textAlignment = .center
-        name.font = Resources.Fonts.light(ofSize: 14)
+        name.font = Resources.Fonts.regular(ofSize: 14)
         name.textColor = Resources.Colors.green
         return name
     }()
@@ -41,7 +41,7 @@ final class SimulationResultHeaderView: UIView {
         stackView.alignment = .center
         stackView.distribution = .fillProportionally
         stackView.axis = .vertical
-        stackView.spacing = 8
+        stackView.spacing = 16
         return stackView
     }()
     

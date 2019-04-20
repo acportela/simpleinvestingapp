@@ -26,7 +26,7 @@ class SimulationResultHeaderViewSpec: QuickSpec {
                     let grossAmount = 1042.99
                     let profit = 42.99
                     let config = SimulationResultHeaderView.Configuration(grossAmount: grossAmount, profit: profit)
-                    let frame = CGRect(x: 0, y: 0, width: 200, height: 80)
+                    let frame = CGRect(x: 0, y: 0, width: 200, height: 100)
                     sut = SimulationResultHeaderView(frame: frame)
                     sut.setup(with: config)
                     sut.outlineRecursively(color: .red)

@@ -13,7 +13,7 @@ final class SingleItemResultView: UIView {
     private let name: UILabel = {
         let name = UILabel()
         name.textAlignment = .left
-        name.font = Resources.Fonts.light(ofSize: 14)
+        name.font = Resources.Fonts.regular(ofSize: 14)
         name.textColor = Resources.Colors.grey
         return name
     }()
@@ -21,7 +21,7 @@ final class SingleItemResultView: UIView {
     private let value: UILabel = {
         let name = UILabel()
         name.textAlignment = .right
-        name.font = Resources.Fonts.light(ofSize: 14)
+        name.font = Resources.Fonts.regular(ofSize: 14)
         name.textColor = Resources.Colors.black
         return name
     }()
@@ -33,6 +33,10 @@ final class SingleItemResultView: UIView {
     
     public required init?(coder aDecoder: NSCoder) {
         fatalError("Use view coding to initialize view")
+    }
+    
+    static var empty: SingleItemResultView {
+        return SingleItemResultView()
     }
     
 }
