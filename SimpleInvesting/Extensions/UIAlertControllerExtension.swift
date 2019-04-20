@@ -9,6 +9,7 @@
 import UIKit
 
 extension UIAlertController {
+    
     convenience init(title: String,
                      message: String,
                      primaryActionTitle: String,
@@ -31,4 +32,5 @@ extension UIAlertController {
         }
         
     }
+    
 }

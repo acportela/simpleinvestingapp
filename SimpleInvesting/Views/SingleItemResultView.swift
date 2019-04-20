@@ -46,7 +46,6 @@ extension SingleItemResultView: ViewCodingProtocol {
     
     func setupConstraints() {
         
-        
         name.snp.makeConstraints { make in
             make.left.top.bottom.equalToSuperview()
         }
@@ -73,33 +72,8 @@ extension SingleItemResultView {
     }
     
     public func setup(with config: Configuration) {
-        
-    }
-    
-    enum ValueKind {
-        
-        case capital(value: Double)
-        case percentage(value: Double)
-        case capitalAndPercentage(capital: Double, percentage: Double)
-        case date(value: Date)
-        case integer(Int)
-        
-        //TODO: Finish it
-//        var formatted: String {
-//            switch self {
-//            case .capital(let value):
-//                break
-//            case .percentage(let value):
-//                break
-//            case .capitalAndPercentage(let value):
-//                break
-//            case .date(let value):
-//                break
-//            case .integer(let value):
-//                break
-//            }
-//        }
-        
+        name.text = config.name
+        value.text = config.value.formatted
     }
     
 }
