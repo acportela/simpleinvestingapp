@@ -10,9 +10,9 @@ import UIKit
 
 final class SimulationInputView: UIView {
     
-    private let investimentInput: SingleItemInputView
-    private let maturityDateInput: SingleItemInputView
-    private let rateInput: SingleItemInputView
+    private let investimentInput: InvestimentInputView
+    private let maturityDateInput: DateItemInputView
+    private let rateInput: RateInputView
     
     let button = MainButtonView()
     
@@ -22,15 +22,21 @@ final class SimulationInputView: UIView {
     
     override init(frame: CGRect = .zero) {
         
-        let investimentConfig = SingleItemInputView.Configuration(inputType: .investiment)
-        let maturityDateConfig = SingleItemInputView.Configuration(inputType: .maturityDate)
-        let rateConfig = SingleItemInputView.Configuration(inputType: .rate)
-        
-        investimentInput = SingleItemInputView(config: investimentConfig)
-        maturityDateInput = SingleItemInputView(config: maturityDateConfig)
-        rateInput = SingleItemInputView(config: rateConfig)
+        investimentInput = InvestimentInputView()
+        maturityDateInput = DateItemInputView()
+        rateInput = RateInputView()
         
         super.init(frame: frame)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
+        
         setupViewConfiguration()
     }
     
@@ -61,20 +67,20 @@ extension SimulationInputView: ViewCodingProtocol {
         
         investimentInput.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
-            make.top.equalToSuperview().offset(64)
-            make.height.equalTo(66)
+            make.top.equalToSuperview().offset(48)
+            make.height.equalTo(64)
         }
         
         maturityDateInput.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
             make.top.equalTo(investimentInput.snp.bottom).offset(48)
-            make.height.equalTo(66)
+            make.height.equalTo(64)
         }
         
         rateInput.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
             make.top.equalTo(maturityDateInput.snp.bottom).offset(48)
-            make.height.equalTo(66)
+            make.height.equalTo(64)
         }
         
         button.snp.makeConstraints { make in
@@ -92,24 +98,45 @@ extension SimulationInputView: ViewCodingProtocol {
         button.actionHandler = { [weak self] in self?.onTapToSimulate() }
     }
     
+    func updateConstrantsForKeyboard(showing: Bool) {
+        contentInputView.snp.updateConstraints { make in
+            let topOffset = showing ? -100 : 16
+            let bottomOffset = showing ? -100 : -16
+            make.top.equalTo(safeAreaLayoutGuide.snp.topMargin).offset(topOffset)
+            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottomMargin).offset(bottomOffset)
+        }
+    }
+    
 }
 
 extension SimulationInputView {
     
     func onTapToSimulate() {
         
-        guard let investiment = investimentInput.rawValueInput,
-        let maturityDate = maturityDateInput.rawValueInput,
-        let rate = rateInput.rawValueInput else {
-            return
-        }
-        
-        let simulationInput = SimulationInput(investedAmount: investiment,
-                                              rate: rate,
-                                              maturityDate: maturityDate)
-        
-        simulationTapHandler?(simulationInput)
+//        guard let investiment = investimentInput.rawValueInput,
+//        let maturityDate = maturityDateInput.rawValueInput,
+//        let rate = rateInput.rawValueInput else {
+//            return
+//        }
+//
+//        let simulationInput = SimulationInput(investedAmount: investiment,
+//                                              rate: rate,
+//                                              maturityDate: maturityDate)
+//
+//        simulationTapHandler?(simulationInput)
         
     }
     
+}
+
+extension SimulationInputView {
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if rateInput.inputField.isFirstResponder {
+            updateConstrantsForKeyboard(showing: true)
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        updateConstrantsForKeyboard(showing: false)
+    }
 }

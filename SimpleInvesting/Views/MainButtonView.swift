@@ -67,14 +67,13 @@ extension MainButtonView {
         
     }
     
-    //TODO: Find a better light grey color or use alpha
     private func configureBackgroundColor() {
         if isHighlighted {
             backgroundColor = Resources.Colors.grey
             return
         }
         if !isEnabled {
-            backgroundColor = Resources.Colors.lightGrey
+            backgroundColor = Resources.Colors.lightGrey.withAlphaComponent(0.5)
             return
         }
         backgroundColor = Resources.Colors.green

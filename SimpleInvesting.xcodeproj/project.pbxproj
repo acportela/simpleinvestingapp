@@ -10,6 +10,8 @@
 		477C25E388C1C981BE939385 /* Pods_SimpleInvestingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 859DB96187514165E42ED45C /* Pods_SimpleInvestingTests.framework */; };
 		5E8BE9A503425BC15547ABA4 /* Pods_SimpleInvesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C7F31A8CB950C067A18F352 /* Pods_SimpleInvesting.framework */; };
 		D63615DE226C9CD30009E76E /* SimulationInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63615DD226C9CD30009E76E /* SimulationInputViewController.swift */; };
+		D63615E2226CF2B30009E76E /* DateItemInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63615E1226CF2B30009E76E /* DateItemInputView.swift */; };
+		D63615E4226D08F40009E76E /* RateInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63615E3226D08F40009E76E /* RateInputView.swift */; };
 		D65121EB2269EA4800FC1C3F /* SingleItemResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65121EA2269EA4800FC1C3F /* SingleItemResultView.swift */; };
 		D65823CF226AA0D500FB34A1 /* ValueKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65823CE226AA0D500FB34A1 /* ValueKind.swift */; };
 		D65823D1226AA12200FB34A1 /* SimulationResultHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65823D0226AA12200FB34A1 /* SimulationResultHeaderView.swift */; };
@@ -36,7 +38,7 @@
 		D6582404226BD66C00FB34A1 /* SimulationInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6582403226BD66C00FB34A1 /* SimulationInput.swift */; };
 		D6582406226BE78700FB34A1 /* APIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6582405226BE78700FB34A1 /* APIClientMock.swift */; };
 		D6582409226BE86100FB34A1 /* SimpleInvestingServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6582408226BE86100FB34A1 /* SimpleInvestingServiceSpec.swift */; };
-		D658240B226BEBB000FB34A1 /* SingleItemInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658240A226BEBB000FB34A1 /* SingleItemInputView.swift */; };
+		D658240B226BEBB000FB34A1 /* InvestimentInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658240A226BEBB000FB34A1 /* InvestimentInputView.swift */; };
 		D658240D226BF83800FB34A1 /* SingleItemInputViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658240C226BF83800FB34A1 /* SingleItemInputViewSpec.swift */; };
 		D658240F226C00E600FB34A1 /* SimulationInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658240E226C00E600FB34A1 /* SimulationInputView.swift */; };
 		D6582411226C06BA00FB34A1 /* SimulationInputViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6582410226C06BA00FB34A1 /* SimulationInputViewSpec.swift */; };
@@ -70,6 +72,8 @@
 		8C7F31A8CB950C067A18F352 /* Pods_SimpleInvesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleInvesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C39E90DFA38F43DC2F3CC07C /* Pods-SimpleInvestingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleInvestingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleInvestingTests/Pods-SimpleInvestingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D63615DD226C9CD30009E76E /* SimulationInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationInputViewController.swift; sourceTree = "<group>"; };
+		D63615E1226CF2B30009E76E /* DateItemInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateItemInputView.swift; sourceTree = "<group>"; };
+		D63615E3226D08F40009E76E /* RateInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateInputView.swift; sourceTree = "<group>"; };
 		D65121EA2269EA4800FC1C3F /* SingleItemResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleItemResultView.swift; sourceTree = "<group>"; };
 		D65823CE226AA0D500FB34A1 /* ValueKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueKind.swift; sourceTree = "<group>"; };
 		D65823D0226AA12200FB34A1 /* SimulationResultHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationResultHeaderView.swift; sourceTree = "<group>"; };
@@ -96,7 +100,7 @@
 		D6582403226BD66C00FB34A1 /* SimulationInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationInput.swift; sourceTree = "<group>"; };
 		D6582405226BE78700FB34A1 /* APIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientMock.swift; sourceTree = "<group>"; };
 		D6582408226BE86100FB34A1 /* SimpleInvestingServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleInvestingServiceSpec.swift; sourceTree = "<group>"; };
-		D658240A226BEBB000FB34A1 /* SingleItemInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleItemInputView.swift; sourceTree = "<group>"; };
+		D658240A226BEBB000FB34A1 /* InvestimentInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestimentInputView.swift; sourceTree = "<group>"; };
 		D658240C226BF83800FB34A1 /* SingleItemInputViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleItemInputViewSpec.swift; sourceTree = "<group>"; };
 		D658240E226C00E600FB34A1 /* SimulationInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationInputView.swift; sourceTree = "<group>"; };
 		D6582410226C06BA00FB34A1 /* SimulationInputViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationInputViewSpec.swift; sourceTree = "<group>"; };
@@ -345,13 +349,15 @@
 		D6A29F1222695BD5009780B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D6A29F1322695BE9009780B1 /* ViewCodingProtocol.swift */,
-				D65121EA2269EA4800FC1C3F /* SingleItemResultView.swift */,
-				D65823D0226AA12200FB34A1 /* SimulationResultHeaderView.swift */,
 				D65823E1226B369D00FB34A1 /* MainButtonView.swift */,
-				D65823E5226B595D00FB34A1 /* SimulationResultView.swift */,
 				D658240E226C00E600FB34A1 /* SimulationInputView.swift */,
-				D658240A226BEBB000FB34A1 /* SingleItemInputView.swift */,
+				D65823D0226AA12200FB34A1 /* SimulationResultHeaderView.swift */,
+				D65823E5226B595D00FB34A1 /* SimulationResultView.swift */,
+				D658240A226BEBB000FB34A1 /* InvestimentInputView.swift */,
+				D65121EA2269EA4800FC1C3F /* SingleItemResultView.swift */,
+				D6A29F1322695BE9009780B1 /* ViewCodingProtocol.swift */,
+				D63615E1226CF2B30009E76E /* DateItemInputView.swift */,
+				D63615E3226D08F40009E76E /* RateInputView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -596,13 +602,15 @@
 				D6A29EFC22694B48009780B1 /* Resources.swift in Sources */,
 				D6A29F002269531E009780B1 /* UIAlertControllerExtension.swift in Sources */,
 				D65823E8226B704000FB34A1 /* SimulationResponse.swift in Sources */,
+				D63615E2226CF2B30009E76E /* DateItemInputView.swift in Sources */,
 				D65823F4226B9B8100FB34A1 /* SimulationResultViewController.swift in Sources */,
 				D65823D1226AA12200FB34A1 /* SimulationResultHeaderView.swift in Sources */,
 				D6582404226BD66C00FB34A1 /* SimulationInput.swift in Sources */,
 				D6A29EFE226952EB009780B1 /* UIColorExtension.swift in Sources */,
 				D658240F226C00E600FB34A1 /* SimulationInputView.swift in Sources */,
 				D63615DE226C9CD30009E76E /* SimulationInputViewController.swift in Sources */,
-				D658240B226BEBB000FB34A1 /* SingleItemInputView.swift in Sources */,
+				D658240B226BEBB000FB34A1 /* InvestimentInputView.swift in Sources */,
+				D63615E4226D08F40009E76E /* RateInputView.swift in Sources */,
 				D65823CF226AA0D500FB34A1 /* ValueKind.swift in Sources */,
 				D6582400226BD43D00FB34A1 /* SimpleInvestingService.swift in Sources */,
 				D65823DC226ACDB500FB34A1 /* NSMutableAttributedStringExtension.swift in Sources */,

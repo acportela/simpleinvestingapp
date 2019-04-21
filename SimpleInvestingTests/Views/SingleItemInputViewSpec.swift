@@ -16,7 +16,7 @@ class SingleItemInputViewSpec: QuickSpec {
     
     override func spec() {
         
-        var sut: SingleItemInputView!
+        var sut: InvestimentInputView!
         
         describe("SingleItemInputView") {
             
@@ -25,9 +25,9 @@ class SingleItemInputViewSpec: QuickSpec {
                 context("with investiment type") {
                     
                     beforeEach {
-                        let config = SingleItemInputView.Configuration(inputType: .investiment)
+                        let config = InvestimentInputView.Configuration(inputType: .investiment)
                         let frame = CGRect(x: 0, y: 0, width: 651, height: 66)
-                        sut = SingleItemInputView(frame: frame, config: config)
+                        sut = InvestimentInputView(frame: frame, config: config)
                     }
                     
                     it("must render properly") {
@@ -39,9 +39,9 @@ class SingleItemInputViewSpec: QuickSpec {
                 context("with maturity date type") {
                     
                     beforeEach {
-                        let config = SingleItemInputView.Configuration(inputType: .maturityDate)
+                        let config = InvestimentInputView.Configuration(inputType: .maturityDate)
                         let frame = CGRect(x: 0, y: 0, width: 651, height: 66)
-                        sut = SingleItemInputView(frame: frame, config: config)
+                        sut = InvestimentInputView(frame: frame, config: config)
                     }
                     
                     it("must render properly") {
@@ -53,9 +53,9 @@ class SingleItemInputViewSpec: QuickSpec {
                 context("with rate type") {
                     
                     beforeEach {
-                        let config = SingleItemInputView.Configuration(inputType: .rate)
+                        let config = InvestimentInputView.Configuration(inputType: .rate)
                         let frame = CGRect(x: 0, y: 0, width: 651, height: 66)
-                        sut = SingleItemInputView(frame: frame, config: config)
+                        sut = InvestimentInputView(frame: frame, config: config)
                     }
                     
                     it("must render properly") {

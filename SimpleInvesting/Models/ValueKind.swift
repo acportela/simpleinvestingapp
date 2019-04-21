@@ -36,7 +36,7 @@ enum ValueKind {
             
         case .date(let value):
             
-            let calendar = Calendar(identifier: .gregorian)
+            let calendar = Calendar.current
             let day = calendar.component(.day, from: value)
             let month = calendar.component(.month, from: value)
             let year = calendar.component(.year, from: value)

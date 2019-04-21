@@ -28,7 +28,7 @@ class AppCoordinator: Coordinator {
     
     func start() {
         configureNavigationBar()
-        startSimulationInput()
+        startInputViewController()
     }
     
     func configureNavigationBar() {
@@ -38,26 +38,23 @@ class AppCoordinator: Coordinator {
         navigation.navigationBar.isTranslucent = false
     }
     
-    private func startSimulationInput() {
+    private func startInputViewController() {
         inputViewcController.delegate = self
         navigation.pushViewController(inputViewcController, animated: false)
     }
     
-    private func startSimulationResult(result: SimulationResponse) {
-        
+    private func startResultViewController(result: SimulationResponse) {
         let resultViewController = SimulationResultViewController(response: result)
         resultViewController.delegate = self
         self.resultViewController = resultViewController
-        
         navigation.pushViewController(resultViewController, animated: true)
-        
     }
     
     private func simulateWithInput(_ input: SimulationInput) {
         service.simulateInvestiment(input: input) { [weak self] result in
             switch result {
             case .success(let response):
-                self?.startSimulationResult(result: response)
+                self?.startResultViewController(result: response)
             case .error:
                 //TODO: Handle Errors
                 break

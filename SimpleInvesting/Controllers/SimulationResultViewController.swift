@@ -122,8 +122,8 @@ extension SimulationResultViewController {
             
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-            formatter.calendar = Calendar(identifier: .iso8601)
-            formatter.locale = Locale(identifier: "en_US_POSIX")
+            formatter.calendar = .current
+            formatter.locale = .current
             
             if let date = formatter.date(from: dateString) {
                 let config = SingleItemResultView.Configuration(name: "Data de resgate", value: .date(value: date))
