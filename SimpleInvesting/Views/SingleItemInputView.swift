@@ -21,17 +21,13 @@ final class SingleItemInputView: UIView {
     private let inputValue: UITextField = {
         let value = UITextField()
         value.textAlignment = .center
-        value.font = Resources.Fonts.light(ofSize: 26)
+        value.font = Resources.Fonts.light(ofSize: 29)
         value.textColor = Resources.Colors.grey
         value.keyboardType = .asciiCapableNumberPad
         return value
     }()
     
-    private let separator: UIView = {
-        let view = UIView()
-        view.backgroundColor = Resources.Colors.lightGrey
-        return view
-    }()
+    private let separator = UIView()
     
     init(frame: CGRect = .zero, config: SingleItemInputView.Configuration) {
         super.init(frame: frame)
@@ -74,6 +70,7 @@ extension SingleItemInputView: ViewCodingProtocol {
     
     func configureViews() {
         backgroundColor = Resources.Colors.white
+        separator.backgroundColor = Resources.Colors.lightGrey.withAlphaComponent(0.3)
     }
     
 }

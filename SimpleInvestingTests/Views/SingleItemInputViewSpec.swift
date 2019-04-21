@@ -26,7 +26,7 @@ class SingleItemInputViewSpec: QuickSpec {
                     
                     beforeEach {
                         let config = SingleItemInputView.Configuration(inputType: .investiment)
-                        let frame = CGRect(x: 0, y: 0, width: 651, height: 63)
+                        let frame = CGRect(x: 0, y: 0, width: 651, height: 66)
                         sut = SingleItemInputView(frame: frame, config: config)
                     }
                     
@@ -40,7 +40,7 @@ class SingleItemInputViewSpec: QuickSpec {
                     
                     beforeEach {
                         let config = SingleItemInputView.Configuration(inputType: .maturityDate)
-                        let frame = CGRect(x: 0, y: 0, width: 651, height: 63)
+                        let frame = CGRect(x: 0, y: 0, width: 651, height: 66)
                         sut = SingleItemInputView(frame: frame, config: config)
                     }
                     
@@ -54,7 +54,7 @@ class SingleItemInputViewSpec: QuickSpec {
                     
                     beforeEach {
                         let config = SingleItemInputView.Configuration(inputType: .rate)
-                        let frame = CGRect(x: 0, y: 0, width: 651, height: 63)
+                        let frame = CGRect(x: 0, y: 0, width: 651, height: 66)
                         sut = SingleItemInputView(frame: frame, config: config)
                     }
                     

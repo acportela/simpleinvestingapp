@@ -29,7 +29,6 @@ class SimulationResultHeaderViewSpec: QuickSpec {
                     let frame = CGRect(x: 0, y: 0, width: 200, height: 100)
                     sut = SimulationResultHeaderView(frame: frame)
                     sut.setup(with: config)
-                    sut.outlineRecursively(color: .red)
                 }
                 
                 it("must render properly") {
