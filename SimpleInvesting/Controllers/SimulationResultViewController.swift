@@ -9,13 +9,19 @@
 import UIKit
 
 protocol SimulationResultViewControllerDelegate: class {
-    func simulationResultViewControllerDidTapFetchAgain(_ viewController: UIViewController)
+    func simulationResultViewControllerDidRequestSimulation(_ viewController: UIViewController)
 }
 
 final class SimulationResultViewController: UIViewController {
     
     let simulationResultView = SimulationResultView()
-    let simulationResponse: SimulationResponse
+    
+    var simulationResponse: SimulationResponse {
+        didSet {
+            setupView()
+        }
+    }
+    
     weak var delegate: SimulationResultViewControllerDelegate?
     
     init(response: SimulationResponse) {
@@ -49,7 +55,7 @@ extension SimulationResultViewController {
         simulationResultView.button.actionHandler = { [weak self] in
             guard let sSelf = self, let delegate = sSelf.delegate else { return }
             sSelf.simulationResultView.button.startLoading()
-            delegate.simulationResultViewControllerDidTapFetchAgain(sSelf)
+            delegate.simulationResultViewControllerDidRequestSimulation(sSelf)
         }
     }
     

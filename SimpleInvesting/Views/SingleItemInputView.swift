@@ -18,7 +18,7 @@ final class SingleItemInputView: UIView {
         return title
     }()
     
-    private let inputValue: UITextField = {
+    private let inputField: UITextField = {
         let value = UITextField()
         value.textAlignment = .center
         value.font = Resources.Fonts.light(ofSize: 29)
@@ -26,6 +26,10 @@ final class SingleItemInputView: UIView {
         value.keyboardType = .asciiCapableNumberPad
         return value
     }()
+    
+    var rawValueInput: String? {
+        return nil
+    }
     
     private let separator = UIView()
     
@@ -45,7 +49,7 @@ extension SingleItemInputView: ViewCodingProtocol {
     
     func buildViewHierarchy() {
         addSubview(inputTitle)
-        addSubview(inputValue)
+        addSubview(inputField)
         addSubview(separator)
     }
     
@@ -55,7 +59,7 @@ extension SingleItemInputView: ViewCodingProtocol {
             make.left.top.right.equalToSuperview()
         }
 
-        inputValue.snp.makeConstraints { make in
+        inputField.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
             make.top.equalTo(inputTitle.snp.bottom).offset(16)
         }
@@ -63,7 +67,7 @@ extension SingleItemInputView: ViewCodingProtocol {
         separator.snp.makeConstraints { make in
             make.height.equalTo(1)
             make.left.right.equalToSuperview()
-            make.top.equalTo(inputValue.snp.bottom).offset(4)
+            make.top.equalTo(inputField.snp.bottom).offset(4)
         }
         
     }
@@ -83,37 +87,41 @@ extension SingleItemInputView {
     
     public func setup(with config: Configuration) {
         inputTitle.text = config.inputType.title
-        inputValue.text = config.inputType.initialValue
+        inputField.text = config.inputType.initialValue
     }
     
 }
 
-enum SimulationItemInputType {
-    
-    case investiment
-    case maturityDate
-    case rate
-    
-    var initialValue: String {
-        switch self {
-        case .investiment:
-            return "R$"
-        case .maturityDate:
-            return "dia/mês/ano"
-        case .rate:
-            return "100%"
+extension SingleItemInputView {
+ 
+    enum SimulationItemInputType {
+        
+        case investiment
+        case maturityDate
+        case rate
+        
+        var initialValue: String {
+            switch self {
+            case .investiment:
+                return "R$"
+            case .maturityDate:
+                return "dia/mês/ano"
+            case .rate:
+                return "100%"
+            }
         }
-    }
-    
-    var title: String {
-        switch self {
-        case .investiment:
-            return "Quanto você gostaria de aplicar? ⃰"
-        case .maturityDate:
-            return "Qual a data de vencimento do investimento? ⃰"
-        case .rate:
-            return "Qual o percentual do CDI do investimento? ⃰"
+        
+        var title: String {
+            switch self {
+            case .investiment:
+                return "Quanto você gostaria de aplicar? ⃰"
+            case .maturityDate:
+                return "Qual a data de vencimento do investimento? ⃰"
+            case .rate:
+                return "Qual o percentual do CDI do investimento? ⃰"
+            }
         }
+        
     }
     
 }

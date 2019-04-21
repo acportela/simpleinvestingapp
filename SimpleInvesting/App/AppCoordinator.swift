@@ -16,9 +16,14 @@ public protocol Coordinator: class {
 class AppCoordinator: Coordinator {
     
     private var navigation: UINavigationController
+    let inputViewcController = SimulationInputViewController()
+    var resultViewController: SimulationResultViewController?
+    let service: SimpleInvestingServiceProtocol
     
-    init(rootViewController: UINavigationController) {
+    init(rootViewController: UINavigationController,
+         service: SimpleInvestingServiceProtocol = SimpleInvestingService()) {
         navigation = rootViewController
+        self.service = service
     }
     
     func start() {
@@ -27,20 +32,51 @@ class AppCoordinator: Coordinator {
     }
     
     func configureNavigationBar() {
-        navigation.navigationBar.barTintColor = Resources.Colors.green
+        navigation.navigationBar.barTintColor = Resources.Colors.grey
         navigation.navigationBar.tintColor = Resources.Colors.white
         navigation.navigationBar.barStyle = .black
         navigation.navigationBar.isTranslucent = false
     }
     
     private func startSimulationInput() {
-        let inputViewcController = UIViewController()
+        inputViewcController.delegate = self
         navigation.pushViewController(inputViewcController, animated: false)
     }
     
-    private func startSimulationResult() {
-        let resultViewController = UIViewController()
+    private func startSimulationResult(result: SimulationResponse) {
+        
+        let resultViewController = SimulationResultViewController(response: result)
+        resultViewController.delegate = self
+        self.resultViewController = resultViewController
+        
         navigation.pushViewController(resultViewController, animated: true)
+        
     }
     
+    private func simulateWithInput(_ input: SimulationInput) {
+        service.simulateInvestiment(input: input) { [weak self] result in
+            switch result {
+            case .success(let response):
+                self?.startSimulationResult(result: response)
+            case .error:
+                //TODO: Handle Errors
+                break
+            }
+        }
+    }
+    
+}
+
+extension AppCoordinator: SimulationInputViewControllerDelegate {
+    func simulationInputViewController(_ viewController: UIViewController,
+                                       didRequestSimulationWithInput input: SimulationInput) {
+        simulateWithInput(input)
+    }
+    
+}
+
+extension AppCoordinator: SimulationResultViewControllerDelegate {
+    func simulationResultViewControllerDidRequestSimulation(_ viewController: UIViewController) {
+        navigation.popViewController(animated: true)
+    }
 }

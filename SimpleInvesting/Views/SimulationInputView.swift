@@ -18,6 +18,8 @@ final class SimulationInputView: UIView {
     
     private let contentInputView = UIView()
     
+    var simulationTapHandler: ((SimulationInput) -> Void)?
+    
     override init(frame: CGRect = .zero) {
         
         let investimentConfig = SingleItemInputView.Configuration(inputType: .investiment)
@@ -87,6 +89,27 @@ extension SimulationInputView: ViewCodingProtocol {
         backgroundColor = Resources.Colors.white
         button.setTitle("Simular", for: .normal)
         button.isEnabled = false
+        button.actionHandler = { [weak self] in self?.onTapToSimulate() }
+    }
+    
+}
+
+extension SimulationInputView {
+    
+    func onTapToSimulate() {
+        
+        guard let investiment = investimentInput.rawValueInput,
+        let maturityDate = maturityDateInput.rawValueInput,
+        let rate = rateInput.rawValueInput else {
+            return
+        }
+        
+        let simulationInput = SimulationInput(investedAmount: investiment,
+                                              rate: rate,
+                                              maturityDate: maturityDate)
+        
+        simulationTapHandler?(simulationInput)
+        
     }
     
 }
