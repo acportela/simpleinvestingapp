@@ -21,7 +21,7 @@ final class SingleItemResultView: UIView {
     private let value: UILabel = {
         let name = UILabel()
         name.textAlignment = .right
-        name.font = Resources.Fonts.regular(ofSize: 14)
+        name.font = Resources.Fonts.light(ofSize: 14)
         name.textColor = Resources.Colors.black
         return name
     }()

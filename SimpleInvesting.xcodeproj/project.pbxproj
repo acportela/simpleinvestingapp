@@ -28,6 +28,15 @@
 		D65823F2226B9B4900FB34A1 /* WindowTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65823F1226B9B4900FB34A1 /* WindowTestHelper.swift */; };
 		D65823F4226B9B8100FB34A1 /* SimulationResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65823F3226B9B8100FB34A1 /* SimulationResultViewController.swift */; };
 		D65823F7226BBAA500FB34A1 /* SimulationResultViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65823F6226BBAA500FB34A1 /* SimulationResultViewControllerSpec.swift */; };
+		D65823FC226BD36700FB34A1 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65823FB226BD36700FB34A1 /* Errors.swift */; };
+		D65823FE226BD3F600FB34A1 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65823FD226BD3F600FB34A1 /* Result.swift */; };
+		D6582400226BD43D00FB34A1 /* SimpleInvestingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65823FF226BD43D00FB34A1 /* SimpleInvestingService.swift */; };
+		D6582402226BD4E600FB34A1 /* SimpleInvestingAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6582401226BD4E600FB34A1 /* SimpleInvestingAPIClient.swift */; };
+		D6582404226BD66C00FB34A1 /* SimulationInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6582403226BD66C00FB34A1 /* SimulationInput.swift */; };
+		D6582406226BE78700FB34A1 /* APIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6582405226BE78700FB34A1 /* APIClientMock.swift */; };
+		D6582409226BE86100FB34A1 /* SimpleInvestingServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6582408226BE86100FB34A1 /* SimpleInvestingServiceSpec.swift */; };
+		D658240B226BEBB000FB34A1 /* SingleItemInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658240A226BEBB000FB34A1 /* SingleItemInputView.swift */; };
+		D658240D226BF83800FB34A1 /* SingleItemInputViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658240C226BF83800FB34A1 /* SingleItemInputViewSpec.swift */; };
 		D66490AB22693AB700B71E04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66490AA22693AB700B71E04 /* AppDelegate.swift */; };
 		D66490B222693AB900B71E04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D66490B122693AB900B71E04 /* Assets.xcassets */; };
 		D66490B522693AB900B71E04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D66490B322693AB900B71E04 /* LaunchScreen.storyboard */; };
@@ -76,6 +85,15 @@
 		D65823F1226B9B4900FB34A1 /* WindowTestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowTestHelper.swift; sourceTree = "<group>"; };
 		D65823F3226B9B8100FB34A1 /* SimulationResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationResultViewController.swift; sourceTree = "<group>"; };
 		D65823F6226BBAA500FB34A1 /* SimulationResultViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationResultViewControllerSpec.swift; sourceTree = "<group>"; };
+		D65823FB226BD36700FB34A1 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		D65823FD226BD3F600FB34A1 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		D65823FF226BD43D00FB34A1 /* SimpleInvestingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleInvestingService.swift; sourceTree = "<group>"; };
+		D6582401226BD4E600FB34A1 /* SimpleInvestingAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleInvestingAPIClient.swift; sourceTree = "<group>"; };
+		D6582403226BD66C00FB34A1 /* SimulationInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationInput.swift; sourceTree = "<group>"; };
+		D6582405226BE78700FB34A1 /* APIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientMock.swift; sourceTree = "<group>"; };
+		D6582408226BE86100FB34A1 /* SimpleInvestingServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleInvestingServiceSpec.swift; sourceTree = "<group>"; };
+		D658240A226BEBB000FB34A1 /* SingleItemInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleItemInputView.swift; sourceTree = "<group>"; };
+		D658240C226BF83800FB34A1 /* SingleItemInputViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleItemInputViewSpec.swift; sourceTree = "<group>"; };
 		D66490A722693AB700B71E04 /* SimpleInvesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleInvesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66490AA22693AB700B71E04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D66490B122693AB900B71E04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -137,8 +155,11 @@
 		D65823CD226AA0C300FB34A1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D65823FB226BD36700FB34A1 /* Errors.swift */,
+				D65823FD226BD3F600FB34A1 /* Result.swift */,
 				D65823CE226AA0D500FB34A1 /* ValueKind.swift */,
 				D65823E7226B704000FB34A1 /* SimulationResponse.swift */,
+				D6582403226BD66C00FB34A1 /* SimulationInput.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -160,6 +181,7 @@
 				D65823D5226AC6DA00FB34A1 /* SimulationResultHeaderViewSpec.swift */,
 				D65823DD226ACE6F00FB34A1 /* SingleItemResultViewSpec.swift */,
 				D65823E3226B4D4800FB34A1 /* MainButtonViewSpec.swift */,
+				D658240C226BF83800FB34A1 /* SingleItemInputViewSpec.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -177,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				D65823E9226B98AD00FB34A1 /* SimulationResponse.json */,
+				D6582405226BE78700FB34A1 /* APIClientMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -207,6 +230,23 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		D65823FA226BD32C00FB34A1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D65823FF226BD43D00FB34A1 /* SimpleInvestingService.swift */,
+				D6582401226BD4E600FB34A1 /* SimpleInvestingAPIClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D6582407226BE83100FB34A1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D6582408226BE86100FB34A1 /* SimpleInvestingServiceSpec.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		D664909E22693AB700B71E04 = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +270,7 @@
 		D66490A922693AB700B71E04 /* SimpleInvesting */ = {
 			isa = PBXGroup;
 			children = (
+				D65823FA226BD32C00FB34A1 /* Network */,
 				D65823F5226BBA8900FB34A1 /* Controllers */,
 				D6A29F0222695449009780B1 /* App */,
 				D65823D2226AB73100FB34A1 /* Extensions */,
@@ -245,11 +286,12 @@
 			isa = PBXGroup;
 			children = (
 				D66490C422693AE600B71E04 /* Info.plist */,
+				D65823F9226BBB3D00FB34A1 /* Controllers */,
+				D65823F0226B9A6A00FB34A1 /* Helpers */,
+				D65823EB226B98C100FB34A1 /* Mocks */,
+				D6582407226BE83100FB34A1 /* Service */,
 				D65823E0226AD63C00FB34A1 /* Utils */,
 				D65823DF226AD63200FB34A1 /* Views */,
-				D65823EB226B98C100FB34A1 /* Mocks */,
-				D65823F0226B9A6A00FB34A1 /* Helpers */,
-				D65823F9226BBB3D00FB34A1 /* Controllers */,
 			);
 			path = SimpleInvestingTests;
 			sourceTree = "<group>";
@@ -300,6 +342,7 @@
 				D65823D0226AA12200FB34A1 /* SimulationResultHeaderView.swift */,
 				D65823E1226B369D00FB34A1 /* MainButtonView.swift */,
 				D65823E5226B595D00FB34A1 /* SimulationResultView.swift */,
+				D658240A226BEBB000FB34A1 /* SingleItemInputView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -538,15 +581,21 @@
 				D6A29F1422695BE9009780B1 /* ViewCodingProtocol.swift in Sources */,
 				D65823E6226B595D00FB34A1 /* SimulationResultView.swift in Sources */,
 				D6A29EFA226949EC009780B1 /* AppCoordinator.swift in Sources */,
+				D65823FC226BD36700FB34A1 /* Errors.swift in Sources */,
 				D65823E2226B369D00FB34A1 /* MainButtonView.swift in Sources */,
+				D6582402226BD4E600FB34A1 /* SimpleInvestingAPIClient.swift in Sources */,
 				D6A29EFC22694B48009780B1 /* Resources.swift in Sources */,
 				D6A29F002269531E009780B1 /* UIAlertControllerExtension.swift in Sources */,
 				D65823E8226B704000FB34A1 /* SimulationResponse.swift in Sources */,
 				D65823F4226B9B8100FB34A1 /* SimulationResultViewController.swift in Sources */,
 				D65823D1226AA12200FB34A1 /* SimulationResultHeaderView.swift in Sources */,
+				D6582404226BD66C00FB34A1 /* SimulationInput.swift in Sources */,
 				D6A29EFE226952EB009780B1 /* UIColorExtension.swift in Sources */,
+				D658240B226BEBB000FB34A1 /* SingleItemInputView.swift in Sources */,
 				D65823CF226AA0D500FB34A1 /* ValueKind.swift in Sources */,
+				D6582400226BD43D00FB34A1 /* SimpleInvestingService.swift in Sources */,
 				D65823DC226ACDB500FB34A1 /* NSMutableAttributedStringExtension.swift in Sources */,
+				D65823FE226BD3F600FB34A1 /* Result.swift in Sources */,
 				D66490AB22693AB700B71E04 /* AppDelegate.swift in Sources */,
 				D65121EB2269EA4800FC1C3F /* SingleItemResultView.swift in Sources */,
 			);
@@ -563,8 +612,11 @@
 				D65823EF226B99C000FB34A1 /* JsonHelper.swift in Sources */,
 				D65823ED226B995C00FB34A1 /* MockHelper.swift in Sources */,
 				D65823F2226B9B4900FB34A1 /* WindowTestHelper.swift in Sources */,
+				D658240D226BF83800FB34A1 /* SingleItemInputViewSpec.swift in Sources */,
 				D65823E4226B4D4800FB34A1 /* MainButtonViewSpec.swift in Sources */,
 				D65823DE226ACE6F00FB34A1 /* SingleItemResultViewSpec.swift in Sources */,
+				D6582409226BE86100FB34A1 /* SimpleInvestingServiceSpec.swift in Sources */,
+				D6582406226BE78700FB34A1 /* APIClientMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
