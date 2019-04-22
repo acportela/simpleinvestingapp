@@ -25,8 +25,11 @@ class SimpleInvestingAPIClient: SessionManager, APIClient {
     static let sharedClient = SimpleInvestingAPIClient()
     
     func requestDecodadle<T: Decodable>(url: URL, callback: @escaping (Result<T>) -> Void) {
+        
         self.request(url: url) { resp in
+            
             switch resp {
+                
             case .success(let data):
                 
                 do {
@@ -66,5 +69,7 @@ class SimpleInvestingAPIClient: SessionManager, APIClient {
             callback(.success(data))
             
         }
+        
     }
+    
 }

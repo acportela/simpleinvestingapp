@@ -29,6 +29,8 @@ class InvestimentInputView: UIView, ViewCodingProtocol {
         return value
     }()
     
+    var postEditingEndedAction: (() -> Void)?
+    
     var title: String {
         return "Quanto você gostaria de aplicar? ⃰"
     }
@@ -131,10 +133,12 @@ extension InvestimentInputView {
         guard let currentText = inputField.text, let value = Double(currentText) else {
             inputField.text = initialValue
             currentValue = nil
+            postEditingEndedAction?()
             return
         }
         currentValue = ValueKind.capital(value: value)
         inputField.text = value.currencyDescription
+        postEditingEndedAction?()
     }
     
 }

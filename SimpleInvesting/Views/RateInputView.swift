@@ -28,10 +28,12 @@ final class RateInputView: InvestimentInputView {
         guard let currentText = inputField.text, let value = Double(currentText) else {
             inputField.text = initialValue
             setDefaultCurrentValue()
+            postEditingEndedAction?()
             return
         }
         currentValue = ValueKind.rate(value: value)
         inputField.text = currentValue?.formatted ?? initialValue
+        postEditingEndedAction?()
     }
     
     private func setDefaultCurrentValue() {

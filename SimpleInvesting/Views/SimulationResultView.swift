@@ -85,7 +85,7 @@ extension SimulationResultView: ViewCodingProtocol {
     func setupConstraints() {
         
         separator.snp.makeConstraints { make in
-            make.height.width.equalTo(20)
+            make.height.equalTo(20)
         }
         
         headerView.snp.makeConstraints { make in

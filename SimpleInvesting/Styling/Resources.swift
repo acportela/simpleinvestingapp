@@ -32,10 +32,6 @@ extension Resources.Fonts {
     static func regular(ofSize size: CGFloat) -> UIFont {
         return font(named: "ProximaNova-Regular", size: size)
     }
-
-    static func semibold(ofSize size: CGFloat) -> UIFont {
-        return font(named: "ProximaNova-Semibold", size: size)
-    }
     
     private static func font(named: String, size: CGFloat) -> UIFont {
         

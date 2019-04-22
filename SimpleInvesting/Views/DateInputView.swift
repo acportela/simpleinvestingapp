@@ -68,6 +68,6 @@ final class DateInputView: InvestimentInputView {
     override func editingBegan() { }
     
     @objc
-    override func editingEnded() { }
+    override func editingEnded() { postEditingEndedAction?() }
     
 }

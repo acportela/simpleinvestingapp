@@ -38,6 +38,8 @@ final class SimulationInputView: UIView {
                                                object: nil)
         
         setupViewConfiguration()
+        setupPostEditingEndedActions()
+        
     }
     
     public required init?(coder aDecoder: NSCoder) {
@@ -94,21 +96,52 @@ extension SimulationInputView: ViewCodingProtocol {
     func configureViews() {
         backgroundColor = Resources.Colors.white
         button.setTitle("Simular", for: .normal)
+        button.isEnabled = false
         button.actionHandler = { [weak self] in self?.onTapToSimulate() }
-    }
-    
-    func updateConstrantsForKeyboard(showing: Bool) {
-        contentInputView.snp.updateConstraints { make in
-            let topOffset = showing ? -100 : 16
-            let bottomOffset = showing ? -100 : -16
-            make.top.equalTo(safeAreaLayoutGuide.snp.topMargin).offset(topOffset)
-            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottomMargin).offset(bottomOffset)
-        }
     }
     
 }
 
 extension SimulationInputView {
+    
+    func setupPostEditingEndedActions() {
+        
+        investimentInput.postEditingEndedAction = { [weak self] in
+            guard let sSelf = self else { return }
+            sSelf.button.isEnabled = sSelf.validateAllInputs() ? true : false
+            sSelf.maturityDateInput.inputField.becomeFirstResponder()
+        }
+        
+        maturityDateInput.postEditingEndedAction = { [weak self] in
+            guard let sSelf = self else { return }
+            sSelf.button.isEnabled = sSelf.validateAllInputs() ? true : false
+            sSelf.rateInput.inputField.becomeFirstResponder()
+        }
+        
+        rateInput.postEditingEndedAction = { [weak self] in
+            guard let sSelf = self else { return }
+            guard sSelf.validateAllInputs() else {
+                sSelf.button.isEnabled = false
+                return
+            }
+            sSelf.button.isEnabled = true
+            sSelf.onTapToSimulate()
+        }
+        
+    }
+    
+    func validateAllInputs() -> Bool {
+        if investimentInput.currentValue == nil {
+            return false
+        }
+        if rateInput.currentValue == nil {
+            return false
+        }
+        if maturityDateInput.currentValue == nil {
+            return false
+        }
+        return true
+    }
     
     func onTapToSimulate() {
         
@@ -129,6 +162,7 @@ extension SimulationInputView {
 }
 
 extension SimulationInputView {
+    
     @objc func keyboardWillShow(notification: NSNotification) {
         if rateInput.inputField.isFirstResponder {
             updateConstrantsForKeyboard(showing: true)
@@ -138,4 +172,14 @@ extension SimulationInputView {
     @objc func keyboardWillHide(notification: NSNotification) {
         updateConstrantsForKeyboard(showing: false)
     }
+    
+    func updateConstrantsForKeyboard(showing: Bool) {
+        contentInputView.snp.updateConstraints { make in
+            let topOffset = showing ? -100 : 16
+            let bottomOffset = showing ? -100 : -16
+            make.top.equalTo(safeAreaLayoutGuide.snp.topMargin).offset(topOffset)
+            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottomMargin).offset(bottomOffset)
+        }
+    }
+    
 }

@@ -76,7 +76,7 @@ extension MainButtonView {
             backgroundColor = Resources.Colors.lightGrey.withAlphaComponent(0.5)
             return
         }
-        backgroundColor = Resources.Colors.grey
+        backgroundColor = Resources.Colors.green
     }
     
 }
