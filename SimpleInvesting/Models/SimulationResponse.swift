@@ -9,6 +9,7 @@
 import Foundation
 
 struct SimulationResponse: Codable {
+    
     let grossAmount: Double?
     let taxesAmount: Double?
     let netAmount: Double?
@@ -35,6 +36,7 @@ struct SimulationResponse: Codable {
 }
 
 struct InvestmentParameter: Codable {
+    
     let investedAmount: Double?
     let yearlyInterestRate: Double?
     let maturityDate: String?
@@ -51,4 +53,5 @@ struct InvestmentParameter: Codable {
         rate = try container.decodeIfPresent(Double.self, forKey: .rate)
         isTaxFree = try container.decodeIfPresent(Bool.self, forKey: .isTaxFree)
     }
+    
 }

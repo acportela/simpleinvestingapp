@@ -94,7 +94,6 @@ extension SimulationInputView: ViewCodingProtocol {
     func configureViews() {
         backgroundColor = Resources.Colors.white
         button.setTitle("Simular", for: .normal)
-        button.isEnabled = false
         button.actionHandler = { [weak self] in self?.onTapToSimulate() }
     }
     
@@ -113,17 +112,17 @@ extension SimulationInputView {
     
     func onTapToSimulate() {
         
-//        guard let investiment = investimentInput.rawValueInput,
-//        let maturityDate = maturityDateInput.rawValueInput,
-//        let rate = rateInput.rawValueInput else {
-//            return
-//        }
-//
-//        let simulationInput = SimulationInput(investedAmount: investiment,
-//                                              rate: rate,
-//                                              maturityDate: maturityDate)
-//
-//        simulationTapHandler?(simulationInput)
+        guard let investiment = investimentInput.currentValue?.plain,
+        let maturityDate = maturityDateInput.currentValue?.plain,
+        let rate = rateInput.currentValue?.plain else {
+            return
+        }
+        
+        let simulationInput = SimulationInput(investedAmount: investiment,
+                                              rate: rate,
+                                              maturityDate: maturityDate)
+
+        simulationTapHandler?(simulationInput)
         
     }
     

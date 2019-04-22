@@ -12,7 +12,7 @@ extension Double {
     
     var currencyDescription: String {
     
-        guard var currencyValue = getFormattedNumberForStyle(.currency) else {
+        guard var currencyValue = formattedNumberForStyle(.currency) else {
             return ""
         }
         
@@ -26,14 +26,25 @@ extension Double {
     }
     
     var percentDescription: String {
-        return getFormattedNumberForStyle(.decimal) ?? ""
+        return formattedNumberForStyle(.decimal) ?? ""
     }
     
-    func getFormattedNumberForStyle(_ style: NumberFormatter.Style) -> String? {
+    func formattedNumberForStyle(_ style: NumberFormatter.Style) -> String? {
         
         let formatter = NumberFormatter()
         formatter.usesGroupingSeparator = true
         formatter.numberStyle = style
+        formatter.locale = Locale.current
+        
+        return formatter.string(from: NSNumber(value: self))
+        
+    }
+    
+    func plainDescription() -> String? {
+        
+        let formatter = NumberFormatter()
+        formatter.usesGroupingSeparator = false
+        formatter.numberStyle = .none
         formatter.locale = Locale.current
         
         return formatter.string(from: NSNumber(value: self))

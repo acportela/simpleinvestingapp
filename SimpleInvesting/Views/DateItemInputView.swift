@@ -20,15 +20,19 @@ final class DateItemInputView: InvestimentInputView {
     
     private var selectedDate: Date? {
         didSet {
-            guard let date = selectedDate else { return }
+            guard let date = selectedDate else {
+                currentValue = nil
+                return
+            }
             inputField.text = getDisplayDate(date)
+            currentValue = ValueKind.date(value: date)
         }
     }
     
     private let datePicker: UIDatePicker = {
         let picker = UIDatePicker()
         picker.locale = .current
-        picker.minimumDate = Date()
+        picker.minimumDate = Calendar.current.date(byAdding: .day, value: 1, to: Date())
         picker.datePickerMode = .date
         return picker
     }()

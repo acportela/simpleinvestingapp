@@ -51,4 +51,29 @@ enum ValueKind {
         
     }
     
+    var plain: String? {
+        
+        switch self {
+            
+        case .capital(let value):
+            return value.plainDescription()
+        case .rate(let value):
+            return value.plainDescription()
+        case .capitalAndRate:
+            return nil
+        case .date(let value):
+            
+            let calendar = Calendar.current
+            let day = calendar.component(.day, from: value)
+            let month = calendar.component(.month, from: value)
+            let year = calendar.component(.year, from: value)
+            
+            return "\(year)-\(month)-\(day)"
+            
+        case .integer(let value):
+            return value.description
+        }
+        
+    }
+    
 }

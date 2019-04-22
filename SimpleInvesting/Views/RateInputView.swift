@@ -18,13 +18,27 @@ final class RateInputView: InvestimentInputView {
         return "100%"
     }
     
+    override func setupInput() {
+        super.setupInput()
+        setDefaultCurrentValue()
+    }
+    
     @objc
     override func editingEnded() {
         guard let currentText = inputField.text, let value = Double(currentText) else {
             inputField.text = initialValue
+            setDefaultCurrentValue()
             return
         }
-        inputField.text = ValueKind.rate(value: value).formatted
+        currentValue = ValueKind.rate(value: value)
+        inputField.text = currentValue?.formatted ?? initialValue
+    }
+    
+    private func setDefaultCurrentValue() {
+        let initial = initialValue.replacingOccurrences(of: "%", with: "")
+        if let value = Double(initial) {
+            currentValue = ValueKind.rate(value: value)
+        }
     }
     
 }

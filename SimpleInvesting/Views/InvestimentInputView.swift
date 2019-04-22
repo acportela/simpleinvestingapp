@@ -35,6 +35,8 @@ class InvestimentInputView: UIView, ViewCodingProtocol {
         return "R$ "
     }
     
+    var currentValue: ValueKind?
+    
     private let separator = UIView()
     
     override init(frame: CGRect = .zero) {
@@ -120,14 +122,17 @@ extension InvestimentInputView {
     @objc
     func editingBegan() {
         inputField.text = ""
+        currentValue = nil
     }
     
     @objc func editingEnded() {
         guard let currentText = inputField.text, let value = Double(currentText) else {
             inputField.text = initialValue
+            currentValue = nil
             return
         }
-        inputField.text = ValueKind.capital(value: value).formatted
+        currentValue = ValueKind.capital(value: value)
+        inputField.text = value.currencyDescription
     }
     
 }
@@ -137,15 +142,8 @@ extension InvestimentInputView: UITextFieldDelegate {
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
-        
-        guard let currentText = textField.text else {
-            return false
-        }
-        
+
         if !string.isEmpty && Int(string) == nil { return false }
-        
-        if currentText.count >= 30 { return false }
-        
         return true
         
     }

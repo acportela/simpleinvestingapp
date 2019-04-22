@@ -16,8 +16,10 @@ public protocol Coordinator: class {
 class AppCoordinator: Coordinator {
     
     private var navigation: UINavigationController
+    
     let inputViewcController = SimulationInputViewController()
     var resultViewController: SimulationResultViewController?
+    
     let service: SimpleInvestingServiceProtocol
     
     init(rootViewController: UINavigationController,
@@ -51,15 +53,39 @@ class AppCoordinator: Coordinator {
     }
     
     private func simulateWithInput(_ input: SimulationInput) {
+        
+        inputViewcController.simulationInputView.button.startLoading()
+        
         service.simulateInvestiment(input: input) { [weak self] result in
+            
+            self?.inputViewcController.simulationInputView.button.stopLoading()
+            
             switch result {
             case .success(let response):
                 self?.startResultViewController(result: response)
-            case .error:
-                //TODO: Handle Errors
-                break
+            case .error(let error):
+                self?.handleError(error, input: input)
             }
+            
         }
+    }
+    
+    private func handleError(_ error: Errors, input: SimulationInput) {
+        
+        let handler: ((UIAlertAction) -> Void) = { [weak self] _ in
+            if error == .malformedURL {
+                return
+            }
+            self?.simulateWithInput(input)
+        }
+        
+        let alertController = UIAlertController(title: error.title,
+                                            message: error.message,
+                                            primaryActionTitle: error.buttonTitle,
+                                            secondaryActionTitle: error.secodaryButtonTitle,
+                                            handler: handler)
+        navigation.topViewController?.present(alertController, animated: true)
+
     }
     
 }

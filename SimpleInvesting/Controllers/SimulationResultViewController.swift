@@ -40,7 +40,7 @@ final class SimulationResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Resultado da Simulação"
+        title = "Simulação"
         
         setupButtonAction()
         setupView()
