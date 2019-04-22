@@ -10,7 +10,7 @@
 		477C25E388C1C981BE939385 /* Pods_SimpleInvestingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 859DB96187514165E42ED45C /* Pods_SimpleInvestingTests.framework */; };
 		5E8BE9A503425BC15547ABA4 /* Pods_SimpleInvesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C7F31A8CB950C067A18F352 /* Pods_SimpleInvesting.framework */; };
 		D63615DE226C9CD30009E76E /* SimulationInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63615DD226C9CD30009E76E /* SimulationInputViewController.swift */; };
-		D63615E2226CF2B30009E76E /* DateItemInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63615E1226CF2B30009E76E /* DateItemInputView.swift */; };
+		D63615E2226CF2B30009E76E /* DateInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63615E1226CF2B30009E76E /* DateInputView.swift */; };
 		D63615E4226D08F40009E76E /* RateInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63615E3226D08F40009E76E /* RateInputView.swift */; };
 		D65121EB2269EA4800FC1C3F /* SingleItemResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65121EA2269EA4800FC1C3F /* SingleItemResultView.swift */; };
 		D65823CF226AA0D500FB34A1 /* ValueKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65823CE226AA0D500FB34A1 /* ValueKind.swift */; };
@@ -39,12 +39,14 @@
 		D6582406226BE78700FB34A1 /* APIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6582405226BE78700FB34A1 /* APIClientMock.swift */; };
 		D6582409226BE86100FB34A1 /* SimpleInvestingServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6582408226BE86100FB34A1 /* SimpleInvestingServiceSpec.swift */; };
 		D658240B226BEBB000FB34A1 /* InvestimentInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658240A226BEBB000FB34A1 /* InvestimentInputView.swift */; };
-		D658240D226BF83800FB34A1 /* SingleItemInputViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658240C226BF83800FB34A1 /* SingleItemInputViewSpec.swift */; };
+		D658240D226BF83800FB34A1 /* InvestimentInputViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658240C226BF83800FB34A1 /* InvestimentInputViewSpec.swift */; };
 		D658240F226C00E600FB34A1 /* SimulationInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658240E226C00E600FB34A1 /* SimulationInputView.swift */; };
 		D6582411226C06BA00FB34A1 /* SimulationInputViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6582410226C06BA00FB34A1 /* SimulationInputViewSpec.swift */; };
 		D66490AB22693AB700B71E04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66490AA22693AB700B71E04 /* AppDelegate.swift */; };
 		D66490B222693AB900B71E04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D66490B122693AB900B71E04 /* Assets.xcassets */; };
 		D66490B522693AB900B71E04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D66490B322693AB900B71E04 /* LaunchScreen.storyboard */; };
+		D66C428D226DC6B4007F4A03 /* RateInputViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C428C226DC6B4007F4A03 /* RateInputViewSpec.swift */; };
+		D66C428F226DC71E007F4A03 /* DateInputViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66C428E226DC71E007F4A03 /* DateInputViewSpec.swift */; };
 		D6A29EFA226949EC009780B1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A29EF9226949EC009780B1 /* AppCoordinator.swift */; };
 		D6A29EFC22694B48009780B1 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A29EFB22694B48009780B1 /* Resources.swift */; };
 		D6A29EFE226952EB009780B1 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A29EFD226952EB009780B1 /* UIColorExtension.swift */; };
@@ -72,7 +74,7 @@
 		8C7F31A8CB950C067A18F352 /* Pods_SimpleInvesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleInvesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C39E90DFA38F43DC2F3CC07C /* Pods-SimpleInvestingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleInvestingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleInvestingTests/Pods-SimpleInvestingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D63615DD226C9CD30009E76E /* SimulationInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationInputViewController.swift; sourceTree = "<group>"; };
-		D63615E1226CF2B30009E76E /* DateItemInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateItemInputView.swift; sourceTree = "<group>"; };
+		D63615E1226CF2B30009E76E /* DateInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateInputView.swift; sourceTree = "<group>"; };
 		D63615E3226D08F40009E76E /* RateInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateInputView.swift; sourceTree = "<group>"; };
 		D65121EA2269EA4800FC1C3F /* SingleItemResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleItemResultView.swift; sourceTree = "<group>"; };
 		D65823CE226AA0D500FB34A1 /* ValueKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueKind.swift; sourceTree = "<group>"; };
@@ -101,7 +103,7 @@
 		D6582405226BE78700FB34A1 /* APIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientMock.swift; sourceTree = "<group>"; };
 		D6582408226BE86100FB34A1 /* SimpleInvestingServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleInvestingServiceSpec.swift; sourceTree = "<group>"; };
 		D658240A226BEBB000FB34A1 /* InvestimentInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestimentInputView.swift; sourceTree = "<group>"; };
-		D658240C226BF83800FB34A1 /* SingleItemInputViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleItemInputViewSpec.swift; sourceTree = "<group>"; };
+		D658240C226BF83800FB34A1 /* InvestimentInputViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestimentInputViewSpec.swift; sourceTree = "<group>"; };
 		D658240E226C00E600FB34A1 /* SimulationInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationInputView.swift; sourceTree = "<group>"; };
 		D6582410226C06BA00FB34A1 /* SimulationInputViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationInputViewSpec.swift; sourceTree = "<group>"; };
 		D66490A722693AB700B71E04 /* SimpleInvesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleInvesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +113,8 @@
 		D66490B622693AB900B71E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D66490C022693AE500B71E04 /* SimpleInvestingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleInvestingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66490C422693AE600B71E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D66C428C226DC6B4007F4A03 /* RateInputViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateInputViewSpec.swift; sourceTree = "<group>"; };
+		D66C428E226DC71E007F4A03 /* DateInputViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateInputViewSpec.swift; sourceTree = "<group>"; };
 		D6A29EF9226949EC009780B1 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		D6A29EFB22694B48009780B1 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		D6A29EFD226952EB009780B1 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -191,8 +195,10 @@
 				D65823D5226AC6DA00FB34A1 /* SimulationResultHeaderViewSpec.swift */,
 				D65823DD226ACE6F00FB34A1 /* SingleItemResultViewSpec.swift */,
 				D65823E3226B4D4800FB34A1 /* MainButtonViewSpec.swift */,
-				D658240C226BF83800FB34A1 /* SingleItemInputViewSpec.swift */,
+				D658240C226BF83800FB34A1 /* InvestimentInputViewSpec.swift */,
 				D6582410226C06BA00FB34A1 /* SimulationInputViewSpec.swift */,
+				D66C428C226DC6B4007F4A03 /* RateInputViewSpec.swift */,
+				D66C428E226DC71E007F4A03 /* DateInputViewSpec.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -356,7 +362,7 @@
 				D658240A226BEBB000FB34A1 /* InvestimentInputView.swift */,
 				D65121EA2269EA4800FC1C3F /* SingleItemResultView.swift */,
 				D6A29F1322695BE9009780B1 /* ViewCodingProtocol.swift */,
-				D63615E1226CF2B30009E76E /* DateItemInputView.swift */,
+				D63615E1226CF2B30009E76E /* DateInputView.swift */,
 				D63615E3226D08F40009E76E /* RateInputView.swift */,
 			);
 			path = Views;
@@ -602,7 +608,7 @@
 				D6A29EFC22694B48009780B1 /* Resources.swift in Sources */,
 				D6A29F002269531E009780B1 /* UIAlertControllerExtension.swift in Sources */,
 				D65823E8226B704000FB34A1 /* SimulationResponse.swift in Sources */,
-				D63615E2226CF2B30009E76E /* DateItemInputView.swift in Sources */,
+				D63615E2226CF2B30009E76E /* DateInputView.swift in Sources */,
 				D65823F4226B9B8100FB34A1 /* SimulationResultViewController.swift in Sources */,
 				D65823D1226AA12200FB34A1 /* SimulationResultHeaderView.swift in Sources */,
 				D6582404226BD66C00FB34A1 /* SimulationInput.swift in Sources */,
@@ -628,11 +634,13 @@
 				D65823D6226AC6DA00FB34A1 /* SimulationResultHeaderViewSpec.swift in Sources */,
 				D65823D8226AC7E500FB34A1 /* SnapshotUtils.swift in Sources */,
 				D65823F7226BBAA500FB34A1 /* SimulationResultViewControllerSpec.swift in Sources */,
+				D66C428D226DC6B4007F4A03 /* RateInputViewSpec.swift in Sources */,
 				D65823EF226B99C000FB34A1 /* JsonHelper.swift in Sources */,
 				D65823ED226B995C00FB34A1 /* MockHelper.swift in Sources */,
+				D66C428F226DC71E007F4A03 /* DateInputViewSpec.swift in Sources */,
 				D6582411226C06BA00FB34A1 /* SimulationInputViewSpec.swift in Sources */,
 				D65823F2226B9B4900FB34A1 /* WindowTestHelper.swift in Sources */,
-				D658240D226BF83800FB34A1 /* SingleItemInputViewSpec.swift in Sources */,
+				D658240D226BF83800FB34A1 /* InvestimentInputViewSpec.swift in Sources */,
 				D65823E4226B4D4800FB34A1 /* MainButtonViewSpec.swift in Sources */,
 				D65823DE226ACE6F00FB34A1 /* SingleItemResultViewSpec.swift in Sources */,
 				D6582409226BE86100FB34A1 /* SimpleInvestingServiceSpec.swift in Sources */,

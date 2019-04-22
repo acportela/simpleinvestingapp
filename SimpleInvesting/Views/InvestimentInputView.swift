@@ -13,7 +13,9 @@ class InvestimentInputView: UIView, ViewCodingProtocol {
     private let titleLabel: UILabel = {
         let title = UILabel()
         title.textAlignment = .center
-        title.font = Resources.Fonts.light(ofSize: 14)
+        title.font = Resources.Fonts.light(ofSize: 16)
+        title.adjustsFontSizeToFitWidth = true
+        title.minimumScaleFactor = 0.9
         title.textColor = Resources.Colors.grey
         return title
     }()

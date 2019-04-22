@@ -34,8 +34,11 @@ final class SimulationInputViewController: UIViewController {
         super.viewDidLoad()
         
         title = "Simular Investimento"
-        
         setupSimulateAction()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "",
+                                                           style: .done,
+                                                           target: nil,
+                                                           action: nil)
         
     }
     

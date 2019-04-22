@@ -1,5 +1,5 @@
 //
-//  DateItemInputView.swift
+//  DateInputView.swift
 //  SimpleInvesting
 //
 //  Created by Antonio Rodrigues on 21/04/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class DateItemInputView: InvestimentInputView {
+final class DateInputView: InvestimentInputView {
     
     override var title: String {
         return "Qual a data de vencimento do investimento? ⃰"

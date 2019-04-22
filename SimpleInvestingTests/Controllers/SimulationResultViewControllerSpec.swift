@@ -28,7 +28,6 @@ class SimulationResultViewControllerSpec: QuickSpec {
                     let response = helper.parse(dataType: SimulationResponse.self,
                                                 from: data)
                     sut = SimulationResultViewController(response: response)
-                    sut.view.outlineRecursively(color: .red)
                     WindowTestHelper.show(controller: sut)
                 }
                 

@@ -84,6 +84,7 @@ class AppCoordinator: Coordinator {
                                             primaryActionTitle: error.buttonTitle,
                                             secondaryActionTitle: error.secodaryButtonTitle,
                                             handler: handler)
+        
         navigation.topViewController?.present(alertController, animated: true)
 
     }

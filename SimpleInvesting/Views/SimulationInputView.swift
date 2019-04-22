@@ -11,7 +11,7 @@ import UIKit
 final class SimulationInputView: UIView {
     
     private let investimentInput: InvestimentInputView
-    private let maturityDateInput: DateItemInputView
+    private let maturityDateInput: DateInputView
     private let rateInput: RateInputView
     
     let button = MainButtonView()
@@ -23,7 +23,7 @@ final class SimulationInputView: UIView {
     override init(frame: CGRect = .zero) {
         
         investimentInput = InvestimentInputView()
-        maturityDateInput = DateItemInputView()
+        maturityDateInput = DateInputView()
         rateInput = RateInputView()
         
         super.init(frame: frame)
@@ -68,19 +68,19 @@ extension SimulationInputView: ViewCodingProtocol {
         investimentInput.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
             make.top.equalToSuperview().offset(48)
-            make.height.equalTo(64)
+            make.height.equalTo(66)
         }
         
         maturityDateInput.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
             make.top.equalTo(investimentInput.snp.bottom).offset(48)
-            make.height.equalTo(64)
+            make.height.equalTo(66)
         }
         
         rateInput.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
             make.top.equalTo(maturityDateInput.snp.bottom).offset(48)
-            make.height.equalTo(64)
+            make.height.equalTo(66)
         }
         
         button.snp.makeConstraints { make in
